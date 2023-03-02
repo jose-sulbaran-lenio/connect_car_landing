@@ -1,0 +1,42 @@
+@import "/src/styles/variables";
+
+.tienesDudas{
+  // line-height: 48px;
+  padding: 0;
+}
+.container {
+  padding: 35px 38px;
+  padding-bottom: 65px;
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 70px;
+    margin-bottom: 29px;
+  }
+  h4 {
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0 0 68px 0;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .container {
+    padding: 35px 18px;
+    text-align: center;
+    h1 {
+      font-size: 35px;
+      margin-top: 0px;
+      margin-bottom: 23px;
+    }
+    h4 {
+      font-size: 18px;
+      font-weight: 400;
+      margin: 0 0 45px 0;
+    }
+    h2{
+      margin-bottom: 45px;
+      font-size: 30px;
+    }
+  }
+}

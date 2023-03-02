@@ -1,0 +1,354 @@
+@import "/src/styles/variables";
+
+#__next {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+$body-bg: white;
+
+// $success:       $green !default;
+// $info:          $cyan !default;
+// $warning:       $yellow !default;
+// $danger:        $red !default;
+// $light:         $gray-100 !default;
+// $dark:          $gray-900 !default;
+$font-family-sans-serif: "Plus Jakarta Sans", system-ui, -apple-system;
+$font-weight-light: 400;
+$font-weight-normal: 700;
+$body-color: $primary; // default text color
+
+* {
+  font-family: "Plus Jakarta Sans", "Courier New", Courier, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+body {
+  overflow: auto;
+  height: 100%;
+  .offcanvas-backdrop {
+    z-index: 800;
+  }
+}
+
+$btn-border-radius: 100px;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1400px
+);
+@import url("https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans:regular,bold,italic");
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+
+// .btn {
+//   background-color: $tertiary;
+//   border: 1px solid $tertiary;
+// }
+
+.nav-link {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+}
+.globalLoading {
+  * {
+    cursor: wait !important;
+  }
+}
+.dropdown-toggle::after {
+  border-top: 0;
+  content: url(../svg/chevron-down.svg);
+}
+
+.navbar-expand-lg .navbar-collapse {
+  @media only screen and (max-width: 1025px) {
+    display: none !important;
+  }
+}
+
+.dropdown-toggle {
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-item {
+  font-weight: normal !important;
+}
+.accordion {
+  border: 0px;
+  .accordion-button {
+    border-radius: 0% !important;
+    padding: 36px 0 41px !important;
+    &:not(.collapsed) {
+      background-color: transparent !important;
+      box-shadow: none;
+      padding-bottom: 0px;
+    }
+    &:focus {
+      box-shadow: none !important;
+    }
+  }
+
+  .collapsing {
+    overflow: hidden;
+    padding: 0 !important;
+    margin: 0 !important;
+    .accordion-body {
+      padding: 0 20px 29px 20px !important;
+      margin: 0 !important;
+    }
+  }
+  .accordion-body {
+    color: $tertiary;
+    padding: 0 20px 29px 20px !important;
+    white-space: break-spaces;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 24px;
+  }
+  .accordion-item {
+    border-bottom: 1px solid $primary !important;
+  }
+  .accordion-collapse.collapse.show {
+    border-radius: 0% !important;
+    // border-bottom: 1px solid $primary;
+  }
+  .accordion-item {
+    border: 0px;
+    border-radius: 0% !important;
+  }
+  .accordion-header {
+    margin: 0;
+    button {
+      font-size: 1.125rem;
+      color: $tertiary;
+      font-weight: 700;
+      border-radius: 0;
+    }
+    button::after {
+      background: url(../svg/minus.svg) no-repeat 50% 50%;
+      transform: none;
+    }
+    button.collapsed::after {
+      background: url(../svg/plus.svg) no-repeat 50% 50%;
+    }
+  }
+}
+.text-dark {
+  color: $tertiary !important;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: ">";
+}
+
+.breadcrumb {
+  * {
+    color: $tertiary !important;
+  }
+  a {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  li {
+    &::before {
+      color: black !important;
+      font-weight: 100 !important;
+      opacity: 0.5;
+    }
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+.hide-mobile {
+  display: block;
+}
+.show-mobile {
+  display: none;
+}
+
+.noIndicator {
+  .carousel-indicators,
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+}
+
+.carousel {
+  // <--asking why :global? read this https://github.com/css-modules/css-modules/issues/348
+  @media only screen and (max-width: 1025px) {
+    max-width: 351px;
+  }
+  .carousel-indicators > button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    border: 2px solid $primary !important;
+    background: none !important;
+  }
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    visibility: hidden;
+  }
+  // &:hover {
+  //   .carousel-control-next-icon,
+  //   .carousel-control-prev-icon {
+  //     visibility: visible;
+  //   }
+  // }
+  .carousel-indicators .active {
+    background: $primary !important;
+  }
+  .carousel-indicators {
+    bottom: -14%;
+  }
+  height: var(--test);
+}
+
+@media only screen and (max-width: 1025px) {
+  .hide-mobile {
+    display: none;
+  }
+  .show-mobile {
+    display: block;
+  }
+  .accordion {
+    padding: 0;
+    .accordion-header {
+      line-height: 37px;
+      font-size: 16px;
+      button {
+        padding: 35px 4px 27px 0;
+        gap: 5px;
+      }
+    }
+    .accordion-button {
+      padding: 16px 20px !important;
+    }
+  }
+  .breadcrumb {
+    display: none;
+  }
+}
+
+.nav-tabs .nav-link {
+  padding: 20px 29px;
+  border-radius: 20px 20px 0 0;
+  font-size: 18px;
+  font-weight: 700;
+  @media only screen and (max-width: 1025px) {
+    padding: 16px;
+    font-size: 12px;
+  }
+}
+.nav-tabs .nav-link.active {
+  border-color: $primary;
+  border-bottom: none;
+  position: relative;
+  color: $tertiary;
+  &::before {
+    content: "";
+    background-color: white;
+    position: absolute;
+    bottom: -12px;
+    top: 99%;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.nav-tabs {
+  border-color: $primary;
+}
+
+.tab-content {
+  padding-top: 40px;
+  @media only screen and (max-width: 1025px) {
+    text-align: left;
+  }
+  // h3 {
+  //   font-size: 20px;
+  //   font-weight: 700;
+  // }
+  // p {
+  //   font-size: 16px;
+  //   font-weight: 400;
+  //   margin: 29px 0;
+  // }
+}
+
+a:hover {
+  color: #ffff;
+}
+
+.pagination {
+  a {
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $primary;
+    padding: 0 12px;
+  }
+  padding: 50px 0;
+  .page-item {
+    display: flex;
+    a {
+      color: $tertiary !important;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 25px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      span {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+      }
+    }
+    span {
+      display: flex;
+      span {
+        flex-wrap: wrap;
+        align-content: center;
+      }
+    }
+    &.active {
+      span {
+        color: $primary !important;
+        background-color: white !important;
+        border: none;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 25px;
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+      }
+    }
+
+    &.disabled {
+      span {
+        border: none;
+      }
+    }
+  }
+}

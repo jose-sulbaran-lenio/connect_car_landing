@@ -1,0 +1,159 @@
+@import "/src/styles/variables";
+.featured {
+  padding-bottom: 87px !important;
+  h2 {
+    color: $tertiary;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  h6 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin: 50px 0;
+  gap: 30px 80px;
+  grid-template-areas:
+    "car tachometer tools"
+    "rubber gas key";
+}
+
+.img {
+  margin-bottom: 40px;
+  height: 80px;
+}
+
+.imgSimplified {
+  margin-bottom: 20px;
+  height: 50px;
+}
+
+.todoIncluido {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px !important;
+  line-height: 35px;
+  text-align: center;
+  margin-bottom: 9px !important;
+  color: $tertiary;
+}
+
+.title {
+  white-space: break-spaces;
+  margin-bottom: 10px;
+  width: 90%;
+  height: 50px;
+}
+
+.desc {
+  white-space: break-spaces;
+}
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h5 {
+    font-size: 23px;
+    font-weight: 700;
+    color: $tertiary !important;
+  }
+  p {
+    color: $tertiary !important;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  // justify-content: space-around;
+}
+
+.car {
+  grid-area: car;
+}
+.gas {
+  grid-area: gas;
+}
+.key {
+  grid-area: key;
+}
+.rubber {
+  grid-area: rubber;
+}
+.tachometer {
+  grid-area: tachometer;
+}
+.tools {
+  grid-area: tools;
+}
+@media only screen and (max-width: 1025px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    margin: 60px auto;
+    gap: 30px 30px;
+  }
+  .img {
+    margin-bottom: 10px;
+  }
+  .featuredSimplified {
+    padding-bottom: 100px !important;
+  }
+  .imgSimplified {
+    height: 60px;
+  }
+
+  .title {
+    width: 80%;
+    margin-bottom: 10px;
+    height: auto;
+  }
+  .desc {
+    width: 80%;
+  }
+  .featured {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    padding-top: 30px !important;
+    padding-bottom: 51px !important;
+    :global(.btn) {
+      width: 100%;
+      justify-content: center;
+    }
+    & > h2 {
+      padding-bottom: 18px;
+    }
+    h2 {
+      color: $tertiary;
+      font-size: 35px;
+    }
+    h6 {
+      font-size: 20px;
+    }
+  }
+}
+
+.featuredSimplified {
+  padding-bottom: 0px;
+  h2 {
+    color: $tertiary;
+    font-size: 40px;
+    font-weight: 700;
+  }
+  h6 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.gridFlex {
+  padding-top: 42px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  > * {
+    min-width: 156px;
+    flex: 1;
+  }
+}

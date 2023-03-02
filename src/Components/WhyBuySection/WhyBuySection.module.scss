@@ -1,0 +1,175 @@
+@import "/src/styles/variables";
+
+.beneficiosTabla {
+  @media only screen and (max-width: 1199px) {
+    margin-top: 90px;
+  }
+}
+.cardCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cardColTitle {
+  margin-bottom: 30px;
+  h3 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.cardColTitleSimply {
+  margin-bottom: 0;
+  @media only screen and (max-width: 1025px) {
+    text-align: center;
+  }
+  h3 {
+    font-size: 30px;
+    font-weight: 700;
+  }
+  h5 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.carousel :global {
+  // <--asking why :global? read this https://github.com/css-modules/css-modules/issues/348
+  max-width: 360px;
+  .carousel-indicators > button {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    border: 2px solid $primary !important;
+    background: none !important;
+  }
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon {
+    visibility: hidden;
+  }
+  // &:hover {
+  //   .carousel-control-next-icon,
+  //   .carousel-control-prev-icon {
+  //     visibility: visible;
+  //   }
+  // }
+  .carousel-indicators .active {
+    background: $primary !important;
+  }
+  .carousel-indicators {
+    bottom: -41px;
+  }
+  .carousel-inner {
+    left: -10px;
+    width: calc(100% + 20px);
+    .carousel-item {
+      padding: 0 10px;
+    }
+  }
+  height: var(--test);
+}
+
+.description {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 28px;
+  color: $tertiary;
+  @media only screen and (max-width: 1025px) {
+    text-align: center;
+  }
+}
+
+.col_centered {
+  display: flex;
+  justify-content: center;
+  gap: 69px;
+}
+.section {
+  margin-top: 133px;
+  margin-bottom: 128px;
+  overflow: hidden;
+}
+
+.miniCardsSection {
+  margin-top: 93px;
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+}
+.cardsGrid {
+  display: grid;
+  justify-items: center;
+  gap: 63px;
+  grid-template-areas:
+    "card1 card1 card2 card2 card3 card3"
+    ". card4 card4 card5 card5 .";
+}
+
+.card1 {
+  grid-area: card1;
+}
+.card2 {
+  grid-area: card2;
+}
+.card3 {
+  grid-area: card3;
+}
+.card4 {
+  grid-area: card4;
+}
+.card5 {
+  grid-area: card5;
+}
+
+@media only screen and (max-width: 1025px) {
+  .cardColTitle {
+    text-align: center;
+    margin-bottom: 30px;
+    h3 {
+      padding-bottom: 15px;
+    }
+  }
+  .col_centered {
+    // flex-direction: column;
+    width: 100%;
+    // justify-content: center;
+    // align-items: center;
+    display: block;
+    & > * {
+      width: 95%;
+      margin: 0 auto;
+    }
+  }
+
+  .section {
+    margin-top: 68px;
+    margin-bottom: 65px;
+  }
+  .btnSection {
+    :global(.btn) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  .cardsGrid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    & > * {
+      width: 100%;
+    }
+  }
+  .miniCardsSection {
+    margin-top: 63px;
+    h2 {
+      font-size: 32px;
+    }
+  }
+}

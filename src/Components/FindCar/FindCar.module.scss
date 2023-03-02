@@ -1,0 +1,121 @@
+@import "/src/styles/variables";
+
+.container {
+  color: $tertiary;
+  padding: 35px 38px 0px 38px;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 70px;
+    margin-bottom: 29px;
+  }
+  h6 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 35px;
+  }
+}
+.emptyState {
+  min-height: 500px;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  svg {
+    transform: rotate(90deg);
+    width: 90px;
+    height: auto;
+    rect {
+      fill: #666;
+    }
+  }
+}
+.filters {
+  :global(.btn) {
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    border-width: 2px !important;
+  }
+}
+.mobileFilters {
+  display: none;
+  padding-bottom: 20px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(354px, 1fr));
+  justify-items: center;
+  column-gap: 65px;
+  row-gap: 56px;
+  padding: 55px 0 0 0;
+  min-height: 500px;
+}
+.carsView {
+  min-height: 500px;
+}
+.scrollLoad {
+  position: relative;
+  height: 44px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    transform: rotate(90deg);
+    width: 90px;
+    height: 44px;
+    rect {
+      fill: #666;
+    }
+  }
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 45px;
+  //   height: 100px;
+  //   width: 100px;
+  //   z-index: -1;
+  //   background-color: gray;
+  //   border-radius: 50%;
+  // }
+}
+
+@media only screen and (max-width: 1025px) {
+  .mobileFilters {
+    display: block;
+  }
+  .cards {
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0 12px;
+    row-gap: 0px;
+    & > * {
+      padding: 10px 0;
+    }
+  }
+  .container {
+    padding: 35px 0px;
+    text-align: center;
+
+    h2 {
+      font-size: 35px;
+      margin-top: 0px;
+      margin-bottom: 23px;
+      margin-left: 18px;
+      margin-right: 18px;
+    }
+    h6 {
+      font-size: 18px;
+      margin-bottom: 25px;
+      margin-left: 18px;
+      margin-right: 18px;
+    }
+  }
+  .filters {
+    display: none;
+  }
+}

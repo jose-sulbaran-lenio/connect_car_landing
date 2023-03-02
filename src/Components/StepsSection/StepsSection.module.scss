@@ -1,0 +1,110 @@
+@import "/src/styles/variables";
+.stepSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $tertiary;
+  padding-top: 3rem;
+  gap: 80px;
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: $tertiary;
+  }
+  h4 {
+    padding: 20px 0;
+    font-size: 23px;
+    font-weight: 700;
+    color: $tertiary;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 400;
+    color: $tertiary;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+  }
+}
+
+.stepSectionExtended {
+  padding-top: 70px;
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 90px;
+    .card {
+      display: grid;
+      column-gap: 69px;
+      grid-template-areas:
+        "img title"
+        "img subtitle"
+        "img desc"
+        "img desc";
+      img {
+        grid-area: img;
+      }
+      h4 {
+        text-align: left;
+        grid-area: title;
+      }
+      h6 {
+        text-align: left;
+        grid-area: subtitle;
+      }
+      p {
+        text-align: left;
+        grid-area: desc;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .stepSection {
+    max-width: 100%;
+    overflow: hidden;
+    padding-top: 60px;
+    padding-left: 0px;
+    padding-right: 0px;
+    h2 {
+      font-size: 35px;
+    }
+    :global(.btn) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  .grid,
+  .card {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 18px;
+  }
+  .buttons {
+    padding: 0 12px;
+  }
+  .stepSectionExtended {
+    h3{
+      font-size: 30px;
+      font-weight: 700;
+    }
+    .grid {
+      gap: 50px;
+      .card {
+        img {
+          margin: 0 auto;
+        }
+        h4,
+        h6,
+        p {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import "/src/styles/variables";
+
+.outline {
+  border-width: 2px;
+}
+.button {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1em;
+  padding: 11px 20px;
+  gap: 10px;
+  min-height: 45px;
+  svg {
+    font-size: 25px;
+  }
+  &.big {
+    font-weight: 700;
+    font-size: 18px;
+    padding: 10px 54px;
+    line-height: normal !important;
+    letter-spacing: normal !important;
+  }
+  &.small {
+    padding: 5px 20px;
+  }
+  &.smaller {
+    max-height: 37px;
+    min-height: auto !important;
+  }
+}
+
+.tertiary {
+  background-color: $tertiary;
+  color: white;
+  &:hover {
+    background-color: rgba($tertiary, 0.8);
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .button {
+    &.big {
+      padding: 11px 32px;
+    }
+    &.small {
+      padding: 5px 10px;
+    }
+  }
+}

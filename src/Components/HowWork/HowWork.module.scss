@@ -1,0 +1,83 @@
+@import "/src/styles/variables";
+
+.container {
+  color: $tertiary;
+  padding: 35px 38px;
+
+  h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 70px;
+  }
+  h2 + h5 {
+    margin-top: 30px;
+  }
+  h5 {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  h6 {
+    font-size: 18px;
+    font-weight: 400;
+    @media only screen and (max-width: 1025px) {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    // margin-bottom: 35px;
+  }
+}
+
+.carousel {
+  margin-top: 60px;
+  margin-bottom: 100px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(354px, 1fr));
+  justify-items: center;
+  column-gap: 65px;
+  row-gap: 56px;
+  padding: 55px 0;
+}
+
+.carsSection {
+  margin-top: 80px;
+  @media only screen and (max-width: 1025px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .container {
+    text-align: center;
+    padding: 35px 0px;
+    h2 {
+      font-size: 35px;
+      margin-top: 0px;
+      margin-bottom: 23px;
+    }
+    h2 + h6 {
+      margin-top: 40px;
+    }
+    & > section {
+      padding: 0 12px;
+      & + section {
+        margin-top: 30px;
+      }
+    }
+  }
+  .carsSection {
+    margin-top: 60px !important;
+    h2 {
+      font-size: 30px;
+    }
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,343 @@
+@import "/src/styles/variables";
+
+.card {
+  max-width: 376px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: $tertiary;
+  color: white;
+  border-radius: 20px;
+  .picture {
+    img:not(.loadingPicture) {
+      width: auto;
+      height: 180px;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+  }
+  :global(.btn) {
+    width: calc(100% - 40px) !important;
+    text-align: center;
+    justify-content: center;
+  }
+  &.noSpecs img {
+    width: auto !important;
+    height: 155px !important;
+  }
+}
+
+.clickCar {
+  cursor: pointer;
+}
+
+.cardVariant {
+  padding: 0px;
+  overflow: hidden;
+
+  &:not(.carDetails) {
+    background: linear-gradient(
+      0deg,
+      $tertiary 0%,
+      $tertiary 80%,
+      $primary 80%,
+      $primary 100%
+    );
+  }
+  &.carDetails {
+    background: linear-gradient(
+      0deg,
+      $primary 0%,
+      $primary 80%,
+      $tertiary 80%,
+      $tertiary 100%
+    );
+  }
+  color: white;
+  border-radius: 20px;
+  height: 100%;
+  max-height: 466.918px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .specs {
+    background-color: $tertiary;
+  }
+  img:not(.loadingPicture) {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    // height: auto;
+    // width: 90%;
+    height: 300px;
+    width: auto;
+    @media only screen and (max-width: 1025px) {
+      height: auto;
+      width: 90%;
+    }
+  }
+  .loadingPicture {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    // background: linear-gradient(
+    //   0deg,
+    //   $tertiary 0%,
+    //   $tertiary 35%,
+    //   $primary 35%,
+    //   $primary 100%
+    // );
+  }
+  @media only screen and (min-width: 1199px) {
+    img {
+      padding-left: 1px;
+      padding-right: 1px;
+    }
+  }
+  @media only screen and (min-width: 1399px) {
+    img {
+      width: 80%;
+    }
+  }
+  @media screen and (max-width: 1199px) {
+    height: auto;
+  }
+  :global(.btn) {
+    width: calc(100% - 40px) !important;
+    text-align: center;
+    justify-content: center;
+  }
+}
+.fixedHeight {
+  min-height: 480px;
+  & > * {
+    display: flex;
+    flex-direction: column;
+    min-height: 480px;
+    justify-content: space-between;
+  }
+}
+
+.pictureVariant {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    0deg,
+    $tertiary 0%,
+    $tertiary 28%,
+    $primary 28%,
+    $primary 100%
+  );
+}
+
+.carDetails {
+  .pictureVariant {
+    background: linear-gradient(
+      0deg,
+      $primary 0,
+      $primary 28%,
+      $tertiary 28%,
+      $tertiary 100%
+    );
+  }
+  .specs {
+    background-color: $primary;
+  }
+}
+
+.title {
+  white-space: break-spaces;
+  text-align: left;
+  &.mediumTitle {
+    h3 {
+      font-size: 20px;
+    }
+  }
+  span {
+    font-weight: 100;
+    margin-top: -6px;
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+    font-weight: 700;
+  }
+}
+
+.customSizeCard {
+  max-width: 350px;
+  img {
+    width: auto;
+    height: 150px;
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-top: 17.5px;
+    margin-bottom: 7.5px;
+  }
+}
+.loadingPicture {
+  width: 100%;
+  // background: linear-gradient(
+  //   0deg,
+  //   $tertiary 0%,
+  //   $tertiary 35%,
+  //   $secondary 35%,
+  //   $secondary 100%
+  // );
+  background-color: transparent;
+}
+
+.bgVariant {
+  .loadingPicture {
+    position: relative;
+    top: 2px;
+    // background: linear-gradient(
+    //   0deg,
+    //   $primary 0%,
+    //   $primary 35%,
+    //   $tertiary 35%,
+    //   $tertiary 100%
+    // );
+    width: 100%;
+  }
+  .title {
+    color: white !important;
+  }
+  background-color: $primary !important;
+  .header {
+    background-color: $tertiary !important;
+  }
+  .picture {
+    // &::after {
+    //   background-color: $tertiary !important;
+    // }
+    // &::before {
+    //   background-color: $primary !important;
+    // }
+  }
+}
+.header {
+  background-color: $secondary;
+  color: $tertiary;
+  height: 160px;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-top: 26px;
+  padding-left: 26px;
+  padding-right: 26px;
+  * {
+    z-index: 2;
+  }
+}
+.eco {
+  img {
+    max-width: 44px;
+    height: auto;
+  }
+}
+
+.picture {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: -40%;
+  z-index: 1;
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   background-color: $secondary;
+  //   width: 100%;
+  //   height: 60%;
+  //   top: 0px;
+  //   left: 0;
+  //   z-index: -1;
+  // }
+  // &::before {
+  //   content: "";
+  //   background-color: $tertiary;
+  //   position: absolute;
+  //   width: 100%;
+  //   height: 40%;
+  //   top: 50%;
+  //   left: 0;
+  //   z-index: -1;
+  // }
+}
+
+.price {
+  text-align: left;
+  position: relative;
+  margin: 0 auto;
+  margin-top: -10%;
+  z-index: 1;
+  // width: 62%;
+  white-space: nowrap;
+  * {
+    color: white !important;
+  }
+  display: flex;
+  justify-content: center;
+  article > div {
+    margin-top: -7px;
+  }
+  article > span {
+    font-size: 12px;
+    font-weight: 100;
+  }
+  div {
+    * {
+      display: inline;
+    }
+  }
+  h1 {
+    margin-left: 3px;
+    margin-right: 3px;
+    font-weight: 700 !important;
+    font-size: 2rem !important;
+  }
+  h5,
+  h6 {
+    margin-bottom: 12px;
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
+    font-size: 15px !important;
+    font-weight: 100 !important;
+  }
+}
+.divider {
+  background-color: white;
+  height: 60%;
+  margin: auto 0;
+  // height: 20px;
+}
+.specs {
+  display: grid;
+  grid-template-columns: 1fr 1px minmax(83px, 1fr) 1px 1fr;
+  gap: 20px 30px;
+  @media only screen and (max-width: 1025px) {
+    gap: 20px 25px;
+  }
+  margin-top: 26px;
+  margin-bottom: 26px;
+  margin-left: 25.994px;
+  margin-right: 25.994px;
+  text-align: center;
+}
+
+.specsValue {
+  font-size: 14px;
+  font-weight: 700;
+}
+.specsTitle {
+  margin-top: -2px;
+  font-size: 12px;
+  font-weight: 400;
+}

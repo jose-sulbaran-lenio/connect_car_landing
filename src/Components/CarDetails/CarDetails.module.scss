@@ -1,0 +1,235 @@
+@import "/src/styles/variables";
+
+.container {
+  padding: 35px 38px;
+  @media only screen and (max-width: 1025px) {
+    padding: 28px 10px 0px 10px;
+  }
+}
+
+.titleCar {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  color: $tertiary;
+  padding-bottom: 29px;
+  margin-top: 70px;
+  @media only screen and (max-width: 1025px) {
+    padding-bottom: 15px;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+.subtitleCar {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: $tertiary;
+  padding-bottom: 20px;
+  @media only screen and (max-width: 1025px) {
+    text-align: center;
+  }
+}
+
+.miPlanConnectCar {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 28px;
+  color: $tertiary;
+  margin-bottom: 9px;
+  @media only screen and (max-width: 1025px) {
+    text-align: center;
+    padding: 28px 0 18px 0;
+  }
+}
+.desc {
+  :global(.dropdown-toggle) {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .btn {
+    width: 100%;
+  }
+  @media only screen and (max-width: 1025px) {
+    padding: 0 12px;
+    .btn {
+      padding: 0 12px;
+      margin: 0 auto;
+    }
+  }
+}
+.noEstasSeguro {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+  color: $tertiary;
+  margin-bottom: 0px;
+  @media only screen and (max-width: 1025px) {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+}
+
+.acaTenemosOtros {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  color: $primary;
+  padding-bottom: 97px;
+  @media only screen and (max-width: 1025px) {
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 60px;
+  }
+}
+
+.eligeLaOpcion {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: $tertiary;
+  margin-bottom: 21px;
+}
+
+.textDescription {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: $tertiary;
+}
+
+.textDescriptionValue {
+  @extend .textDescription;
+  color: $primary;
+}
+
+.dropdownMenu :global {
+  width: 100%;
+  button {
+    text-align: left !important;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.priceText {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 44px;
+  color: #131353;
+}
+
+.mensualText {
+  @extend .priceText;
+  font-size: 16px;
+}
+
+.priceText::first-letter {
+  font-size: 20px;
+}
+
+.cuotaText {
+  font-weight: 100;
+  @extend .textDescription;
+  margin-bottom: -10px;
+}
+
+.elPrecioDelContrato {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  color: $primary;
+}
+.loadingState {
+  width: 100%;
+  height: 100%;
+  // position: relative;
+  overflow: hidden;
+  & > * {
+    // position: absolute;
+    // top: -50%;
+    // transform: scale(1.2) translateY(50%);
+    // transform-origin: center;
+    // width: 100%;
+  }
+}
+.equipamiento {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 28px;
+  color: $tertiary;
+  padding-bottom: 18px;
+  @media only screen and (max-width: 1025px) {
+    padding-bottom: 25px;
+  }
+}
+
+.rowContainer {
+  padding-bottom: 52px;
+  :global(.carousel-item) {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+  @media only screen and (max-width: 1025px) {
+    padding-bottom: 25px;
+  }
+}
+
+.accordionDetails {
+  button {
+    color: $primary !important;
+  }
+}
+
+.bodyAccordion {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  color: $tertiary;
+}
+
+.lastCarousel {
+  margin-bottom: 100px;
+}
+
+.lasImagenesSonReferenciales {
+  // position: in;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: left;
+  padding-top: 5px;
+  color: $tertiary;
+  @media only screen and (max-width: 768px) {
+    bottom: calc(-3em);
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    & > div {
+      gap: 18px !important;
+    }
+  }
+}
