@@ -27,6 +27,8 @@
     "sass": "^1.57.0"
   },
   "devDependencies": {
-    "eslint": "8.30.0"
+    "@cloudflare/next-on-pages": "^0.3.0",
+    "eslint": "8.30.0",
+    "vercel": "^28.16.12"
   }
 }

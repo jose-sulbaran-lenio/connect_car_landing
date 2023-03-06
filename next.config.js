@@ -6,6 +6,9 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },
+  experimental: {
+    runtime: "experimental-edge",
+  },
   images: {
     unoptimized: true,
     domains: [

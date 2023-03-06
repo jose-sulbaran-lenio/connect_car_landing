@@ -3,6 +3,9 @@ import { formatCardsCar, isObjEmpty, isTruthy } from "../../src/utils";
 import api from "../../src/api";
 import Error from "next/error";
 
+export const config = {
+  runtime: "experimental-edge",
+};
 function BrandModelVersionCar({ data, details }) {
   if (isObjEmpty(details)) {
     return <Error statusCode={404} />;
