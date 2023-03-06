@@ -1,0 +1,119 @@
+@import "/src/styles/variables";
+
+.container {
+  background-color: $tertiary;
+  max-width: inherit;
+  padding-top: 52px;
+  margin: 0 auto;
+}
+
+.childContainer{
+  max-width: 1320px;
+}
+
+.footerLinks {
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 14px;
+  color: #FFFFFF;
+  text-decoration: auto;
+}
+
+.footerLinksNoBold {
+  @extend .footerLinks;
+  font-weight: 500;
+  @media only screen and (max-width: 768px) {
+    // padding: 18px;
+  }
+}
+
+.fontWeight500 {
+  font-weight: 500;
+}
+
+.buttonSubscribe{
+  background-color: $secondary;
+  max-width: 320px;
+  justify-content: center;
+}
+
+.colEmpresa{
+  div {
+    padding-bottom: 18px;
+  }
+}
+
+.nosotrosPTag {
+  @media only screen and (max-width: 768px) {
+    padding-bottom: 18px;
+  }
+}
+
+.colInfo{
+  @extend .colEmpresa;
+  @media only screen and (max-width: 768px) {
+    padding-bottom: 18px;
+  }
+}
+
+.rowSuscribete {
+  p {
+    padding-bottom: 13px;
+    margin: 0;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    color: #FFFFFF;
+  }
+  p:first-child {
+    font-weight: 700;
+  }
+}
+
+.form{
+  padding-bottom: 13px;
+  max-width: 340px;
+  input {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #929292;
+    height: 40px;
+  }
+}
+
+.formRow {
+  padding: 0 12px;
+}
+
+.connectLogo {
+  display: flex;
+  flex-direction: column;
+  img {
+    margin-bottom: 23.67px;
+  }
+}
+
+.firstRow {
+  padding-bottom: 37px; 
+ .col {
+  flex: 0.19 0;
+ }
+}
+
+.copyright{
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #FFFFFF;
+  padding-bottom: 28px;
+  margin-bottom: 0;
+  @media only screen and (max-width: 768px) {
+    text-align: center;
+    margin: 0;
+  }
+}

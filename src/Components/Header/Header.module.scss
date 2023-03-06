@@ -1,0 +1,139 @@
+.header {
+  position: relative;
+  width: 100%;
+  min-height: 735px;
+  background-color: #3330e8;
+
+  & > section {
+    margin: 0 auto;
+    max-width: 1440px;
+    display: flex;
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 50%;
+    min-height: 735px;
+    background: url(../../images/header.png) no-repeat;
+    background-position-x: 50%;
+    background-position-y: center;
+    background-size: cover;
+
+  }
+  &::after{
+    content: "";
+    background: url(../../svg/isotipo-blanco.svg) no-repeat;
+    background-position-x: left;
+    background-position-y: center;
+    background-size: 142%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 50%;
+    height: 100%;
+    opacity: 0.15;
+    z-index: 0;
+  }
+}
+
+.button{
+  margin-top: 32px;
+}
+
+.bgOne {
+  width: 100%;
+  min-height: 700px;
+}
+.bgTwo {
+  padding: 15% 0;
+  h3 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  span {
+    font-size: 18px;
+    font-weight: 400;
+  }
+  // &::before {
+  //   content: "";
+    
+  // }
+  section {
+    position: relative;
+    z-index: 1;
+    width: 60%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  position: relative;
+  width: 100%;
+  background-color: #3330e8;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 45px;
+}
+
+.subTitle {
+  width: 90%;
+  text-align: center;
+  font-style: normal;
+  font-size: 18px;
+}
+@media only screen and (max-width: 1025px) {
+  .header {
+    background: none;
+    & > section {
+      flex-direction: column;
+    }
+    &::before{
+      background: none
+    }
+    &::after{
+      background: none
+    }
+  }
+
+  .bgOne {
+    background: url(../../images/header.png) no-repeat;
+    background-position-x: 50%;
+    background-position-y: center;
+    background-size: cover;
+    min-height: 50vh;
+    background-position-x: 100%;
+    padding: 25% 0;
+  }
+  .bgTwo {
+    min-height: 50vh;
+    padding: 10% 18px;
+    h3 {
+      font-size: 35px;
+    }
+    span {
+      font-size: 16px;
+    }
+    :global(.btn) {
+      width: 100%;
+      justify-content: center;
+    }
+    &::before {
+      content: "";
+      background: none;
+    }
+    section {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - yarn install
+      - npm run build
+      - aws s3 sync out s3://connect-car-site
+      - aws --region us-east-1 cloudfront create-invalidation --distribution-id E3TK3XNT1HP7 --paths "/*"

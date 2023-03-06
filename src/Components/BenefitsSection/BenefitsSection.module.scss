@@ -1,0 +1,109 @@
+@import "/src/styles/variables";
+
+.benefits {
+  color: white;
+  position: relative;
+  img {
+    width: auto;
+    max-height: 135px;
+  }
+  & > * {
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: $tertiary;
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    background-color: $primary;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    left: 50%;
+    height: 100%;
+    z-index: -1;
+  }
+}
+.bgOne {
+  min-height: 740px;
+  background-color: $tertiary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    font-size: 40px;
+    font-weight: 700;
+  }
+  section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 80px;
+  }
+}
+.bgTwo {
+  padding: 0 50px;
+  background-color: $primary;
+  display: flex;
+  justify-content: center;
+  & > section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  font-weight: 400;
+  :global(.row) {
+    height: 130px;
+  }
+  :global(.col) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 1025px) {
+  .benefits{
+    padding: 0;
+    &::before{
+      background: none
+    }
+    &::after{
+      background: none
+    }
+  }
+  .bgOne {
+    h1 {
+      font-size: 35px;
+    }
+    min-height: auto;
+    padding: 20% 12px;
+    :global(.btn) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  .bgTwo {
+    background-color: $primary;
+    gap: 100px;
+    :global(.row) {
+      gap: 20px;
+      height: auto;
+      text-align: center;
+    }
+
+    & > section {
+      gap: 100px;
+    }
+  }
+}

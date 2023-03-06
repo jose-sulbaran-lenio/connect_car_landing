@@ -1,0 +1,21 @@
+@import "/src/styles/variables";
+
+.breadcrumb {
+  * {
+    color: $tertiary !important;
+  }
+  a {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+  li {
+    &::before {
+      color: black !important;
+      font-weight: 100 !important;
+      opacity: 0.5;
+    }
+    font-size: 14px;
+    font-weight: 600;
+  }
+}

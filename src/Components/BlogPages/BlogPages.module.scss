@@ -1,0 +1,132 @@
+@import "/src/styles/variables";
+
+.container {
+  padding: 35px 38px;
+  @media only screen and (max-width: 1025px) {
+    padding: 0 10px;
+  }
+}
+
+.title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  display: flex;
+  align-items: center;
+  color: $tertiary;
+  margin-bottom: 29px;
+  margin-top: 70px;
+  @media only screen and (max-width: 1025px) {
+    padding: 0 0 29px 19px;
+  }
+}
+.scrollLoad {
+  position: relative;
+  height: 44px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  svg {
+    transform: rotate(90deg);
+    width: 90px;
+    height: 44px;
+    rect {
+      fill: #666;
+    }
+  }
+}
+
+.subtitle {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: $tertiary;
+  @media only screen and (max-width: 1025px) {
+    padding: 0 19px 0 19px;
+  }
+}
+
+.postsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 58px;
+  padding-top: 50px;
+  // justify-content: center;
+  @media only screen and (max-width: 1400px) {
+    gap: 30px 312px;
+  }
+  @media only screen and (max-width: 1200px) {
+    gap: 30px 132px;
+  }
+  @media only screen and (max-width: 1025px) {
+    justify-content: center;
+    gap: 30px 0px;
+  }
+}
+
+.pagination {
+  a {
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    /* identical to box height */
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $primary;
+    padding: 0 12px;
+  }
+  padding: 50px 0;
+}
+
+.pageNumber {
+  display: flex;
+  a {
+    color: $tertiary !important;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    span {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: center;
+    }
+  }
+  span {
+    display: flex;
+    span {
+      flex-wrap: wrap;
+      align-content: center;
+    }
+  }
+}
+
+.active {
+  span {
+    color: $primary !important;
+    background-color: white !important;
+    border: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 25px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+.disabled {
+  span {
+    border: none;
+  }
+}

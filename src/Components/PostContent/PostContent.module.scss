@@ -1,0 +1,97 @@
+@import "/src/styles/variables";
+
+.post {
+  .title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    color: $tertiary;
+    margin-bottom: 41px;
+    margin-top: 70px;
+  }
+  h1 {
+    font-size: 40px;
+    line-height: 35px;
+    font-weight: 700;
+  }
+  h2 {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 700;
+  }
+  h3 {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+  h4 {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 700;
+  }
+  i {
+    color: #3330e8;
+  }
+  font-weight: 100;
+
+  .postContent {
+    * {
+      color: $tertiary;
+      text-align: justify;
+      text-justify: inter-word;
+    }
+    img {
+      max-width: 50%;
+      @media only screen and (max-width: 1025px) {
+        max-width: 100%;
+      }
+      overflow: hidden;
+      border-radius: 20px;
+    }
+    
+  }
+}
+
+.left {
+  margin: 28px 61px 28px 0px;
+  float: left;
+  clear: right;
+}
+
+.right {
+  float: right;
+  margin: 28px 0px 28px 61px;
+}
+.nuestrasPublicaciones {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 55px;
+  color: $tertiary;
+}
+
+.acaTeDejamosOtras {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  color: $primary;
+}
+
+.recommendedPostsContainter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 58px;
+  padding: 50px 0 73px;
+  justify-content: center;
+}
+
+.container {
+  padding: 35px 38px;
+  @media only screen and (max-width: 1025px) {
+    padding: 35px 10px 0px 10px;
+  }
+}
