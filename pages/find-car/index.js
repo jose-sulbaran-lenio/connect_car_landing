@@ -84,7 +84,7 @@ function FindCar({ data, filters, applyFilters }) {
         signal,
       });
     },
-    [findCarApi]
+    [findCarApi],
   );
 
   const changeFilter = useCallback(
@@ -98,7 +98,7 @@ function FindCar({ data, filters, applyFilters }) {
             ...currentFilters,
             [filter]: value || e.target.value,
           },
-          signal
+          signal,
         );
       }
 
@@ -107,7 +107,7 @@ function FindCar({ data, filters, applyFilters }) {
         [filter]: value || e.target.value,
       }));
     },
-    [currentFilters, callFindCarApiWidthParams]
+    [currentFilters, callFindCarApiWidthParams],
   );
   useEffectOnce(() => {
     if (!inViewport || direction === "up" || loadingMore.current || loadEnd) {
@@ -174,7 +174,7 @@ function FindCar({ data, filters, applyFilters }) {
       await Promise.all(
         prices.map(([id, url]) => {
           fetchPrices([id, url], setCarsOutput);
-        })
+        }),
       );
     };
 
@@ -185,7 +185,7 @@ function FindCar({ data, filters, applyFilters }) {
     const output = prepareCars(
       carsOutput,
       currentFilters.orderBy,
-      currentFilters.periods
+      currentFilters.periods,
     );
     return output;
   }, [currentFilters.orderBy, currentFilters.periods, carsOutput]);
@@ -262,3 +262,6 @@ FindCar.getInitialProps = async ({ query }) => {
   }
 };
 export default FindCar;
+export const config = {
+  runtime: "experimental-edge",
+};
