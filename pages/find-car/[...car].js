@@ -8,7 +8,7 @@ export const config = {
 };
 function BrandModelVersionCar({ data, details }) {
   if (isObjEmpty(details)) {
-    return <Error statusCode={404} />;
+    // return <Error statusCode={404} />;
   }
   return (
     <>
