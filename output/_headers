@@ -1,3 +1,5 @@
 # This is a comment
 /find-car/[...car]
   x-matched-path: /find-car/[...car]
+/blog/[slug]
+  x-matched-path: /blog/[slug]
