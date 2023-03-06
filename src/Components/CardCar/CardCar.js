@@ -30,7 +30,7 @@ export function CardCar({
     return typeof onClick === "string"
       ? () =>
           !router.asPath.includes(onClick) &&
-          router.push(`/${onClick}`.replaceAll(" ", "_"))
+          router.push(`${onClick}`.replaceAll(" ", "_"))
       : onClick;
   }, [onClick, router]);
 
