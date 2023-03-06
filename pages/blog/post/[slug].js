@@ -2,7 +2,9 @@ import Head from "next/head";
 import api from "../../../src/api";
 import { PostContent } from "../../../src/Components/PostContent/PostContent";
 import { serialize } from "next-mdx-remote/serialize";
-
+export const config = {
+  runtime: "nodejs",
+};
 const Post = ({ title, content, randomPosts = [] }) => {
   return (
     <>
