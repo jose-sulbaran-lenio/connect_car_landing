@@ -14,9 +14,9 @@ function BrandModelVersionCar({ data, details }) {
   );
 }
 
-BrandModelVersionCar.getInitialProps = async ({ query }) => {
+BrandModelVersionCar.getInitialProps = async ({ query: { car = [] } = {} }) => {
   try {
-    const [brand, model, version, year] = query.car;
+    const [brand = "", model = "", version = "", year = ""] = car;
     const formattedBrand = brand.replaceAll("_", " ");
     const formattedModel = model.replaceAll("_", " ");
     let formattedVersion = version.replaceAll("_", " ");

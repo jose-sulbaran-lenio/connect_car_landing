@@ -18,10 +18,6 @@ import { useCallback, useMemo, useRef, useState } from "react";
 import styles from "../../src/Components/FindCar/FindCar.module.scss";
 import { Loading } from "../../src/Components/utils/loading";
 
-export const config = {
-  runtime: "experimental-edge",
-};
-
 function FindCar({ data, filters, applyFilters }) {
   const loadingMore = useRef(false);
   const [ref, inViewport, direction] = useViewportDetector();
