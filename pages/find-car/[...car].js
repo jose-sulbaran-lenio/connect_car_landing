@@ -2,13 +2,11 @@ import { CarDetails } from "../../src/Components/CarDetails/CarDetails";
 import { formatCardsCar, isObjEmpty, isTruthy } from "../../src/utils";
 import api from "../../src/api";
 import Error from "next/error";
+import dynamic from "next/dynamic";
 
-export const config = {
-  runtime: "experimental-edge",
-};
 function BrandModelVersionCar({ data, details }) {
   if (isObjEmpty(details)) {
-    // return <Error statusCode={404} />;
+    return <Error statusCode={404} />;
   }
   return (
     <>
@@ -57,5 +55,7 @@ BrandModelVersionCar.getInitialProps = async ({ query: { car = [] } = {} }) => {
     return { data: [], details: {} };
   }
 };
-
-export default BrandModelVersionCar;
+const BrandModelVersionCarNoSSR = dynamic(() => BrandModelVersionCar, {
+  ssr: false,
+});
+export default () => BrandModelVersionCarNoSSR;
